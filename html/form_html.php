@@ -6,7 +6,7 @@
     // Firstname
 	echo '<p>';
 	echo '<strong>Voornaam</strong> (vereist) <br/>';
-	echo '<input type="text" name="firstname" size="40" required/>';
+	echo '<input type="text" name="firstname" size="40" required style="color: black !i;"/>';
 	echo '</p>';
     
     // Last name
@@ -68,7 +68,7 @@
 
 	echo '<input type="hidden" value=0 name="motor_brevet">';
     echo '<input type="checkbox" id="motor_brevet" name="motor_brevet" value=1/>';
-    echo '<label for="glider_brevet" style="padding-left: 5px;"> Motor brevet A</label><br>';
+    echo '<label for="motor_brevet" style="padding-left: 5px;"> Motor brevet A</label><br>';
 
 	echo '<input type="hidden" value=0 name="heli_brevet">';
     echo '<input type="checkbox" id="heli_brevet" name="heli_brevet" value=1/>';
