@@ -8,7 +8,7 @@
 	echo '<strong>Voornaam</strong> (vereist) <br/>';
 	echo '<input type="text" name="firstname" size="40" required style="color: black;"/>';
 	echo '</p>';
-    
+
     // Last name
 	echo '<p>';
 	echo '<strong>Achternaam</strong> (vereist) <br/>';
@@ -20,42 +20,42 @@
 	echo '<strong>Adres</strong> (vereist) <br/>';
 	echo '<input type="text" name="address" size="40" required style="color: black;"/>';
 	echo '</p>';
-    
+
     // City
 	echo '<p>';
 	echo '<strong>Woonplaats</strong> (vereist) <br/>';
 	echo '<input type="text" name="city" size="40" required style="color: black;"/>';
 	echo '</p>';
-	
+
     // Postcode
 	echo '<p>';
 	echo '<strong>Postcode</strong> (vereist) <br/>';
 	echo '<input type="text" name="postal_code" size="40" required style="color: black;"/>';
 	echo '</p>';
-	
+
     // Email
 	echo '<p>';
 	echo '<strong>Email</strong> (vereist) <br/>';
 	echo '<input type="text" name="email" size="40" required style="color: black;"/>';
-	echo '</p>';	
+	echo '</p>';
 
     // Phonenumber
 	echo '<p>';
 	echo '<strong>Telefoonnummer</strong> (vereist) <br/>';
 	echo '<input type="text" name="phone" size="40" required style="color: black;"/>';
-	echo '</p>';		
+	echo '</p>';
 
     // Birthdate
 	echo '<p>';
 	echo '<strong>Geboortedatum</strong> (DD-MM-YYYY) (vereist) <br/>';
 	echo '<input type="text" name="birthdate" size="40" required style="color: black;"/>';
-	echo '</p>';	
+	echo '</p>';
 
     // Nationality
 	echo '<p>';
 	echo '<strong>Nationaliteit</strong> (vereist) <br/>';
 	echo '<input type="text" name="nationality" size="40" required style="color: black;"/>';
-	echo '</p>';		
+	echo '</p>';
 
     // Certificates
     echo '<p><strong>';
@@ -90,7 +90,7 @@
 	echo '<p>';
 	echo '<strong>RDW registratienummer</strong> <br/>';
 	echo '<input type="text" name="rdw_number" size="40" style="color: black;"/>';
-	echo '</p>';		
+	echo '</p>';
 
     // Other club select
     echo '<label for="other_club"><strong>Lid van een andere modelvliegclub?</strong> (vereist)</label>';
@@ -106,8 +106,8 @@
     // Other club if yes select
 	echo '<p>';
 	echo '<strong>Bij ja, welke modelvliegclub?</strong> <br/>';
-	echo '<input type="text" name="other_club_text" size="40"/> style="color: black;"';
-	echo '</p>';		 
+	echo '<input type="text" name="other_club_text" size="40" style="color: black;/>';
+	echo '</p>';
 
     // KNVvl select
     echo '<label for="knvvl_select"><strong>K.N.V.v.l.</strong> (vereist)</label>';
@@ -124,18 +124,23 @@
 	echo '<p>';
 	echo '<strong>Bij ja, K.N.V.v.l. registratienummer</strong> <br/>';
 	echo '<input type="text" name="knvvl_text" size="40" style="color: black;"/>';
-	echo '</p>';		 
+	echo '</p>';
 
     // Wanne be member of TRMC at:
 	echo '<p>';
 	echo '<strong>Ik wil lid worden van de T.R.M.C. per</strong> (DD-MM-YYYY) (vereist) <br/>';
 	echo '<input type="text" name="wanna_be_member_at" size="40" required style="color: black;"/>';
-	echo '</p>';	
+	echo '</p>';
 
-    // Cringe spacing
-    echo '<br>';
+	// Anti bot
+	echo '<p>';
+	echo '<strong>Anti bot vraag</strong> <br/>';
+	echo '<input type="text" name="anti_bot" size="40" required" style="color: black;" placeholder="Wat is 3 + 3?"/>';
 
-    echo '<p><input type="submit" name="cf-submitted" value="Verstuur"></p>';
+	// Cringe spacing
+	echo '<br>';
+
+	echo '<p><input type="submit" name="cf-submitted" value="Verstuur"></p>';
 
 	echo '</form>';
 

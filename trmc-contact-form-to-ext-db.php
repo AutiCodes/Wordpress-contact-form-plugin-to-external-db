@@ -3,17 +3,17 @@
 Plugin Name: T.R.M.C. formulier aanmelden leden naar ext. database
 Plugin URI: https://github.com/AutiCodes/Wordpress-contact-form-plugin-to-external-db
 Description: Deze plugin is om nieuwe aanmeldingen in de database van de club manager te zetten (en een mail notificatie te sturen)
-Version: 1.0
+Version: 1.1
 Author: Kelvin de Reus AKA AutiCodes
 Author URI: https://auticodes.nl
 */
 
 /**
  * It's me, AutiCodes.
- * Yes, i didn't follow coding standard from Wordpress. 
+ * Yes, i didn't follow coding standard from WordPress. 
  * Fluff them!
- * 
- * Maybe i gonna hate feature me, maybe not. Feel free tol fix it if you want.
+ *
+ * Maybe i gonna hate feature me, maybe not. Feel free to fix it if you want.
  */
 
 /**
@@ -56,7 +56,7 @@ function trmcCfSettingsFieldCallback() {
 
 /**
  * The HTML of the form
- * 
+ *
  * @author AutiCodes
  * @return void
  */
@@ -68,7 +68,7 @@ function htmlFormCode(): void
 
 /**
  * Handles the form submission 
- * 
+ *
  * @author AutiCodes
  * @return void
  */
@@ -78,6 +78,11 @@ function handleNewFormSubmission(): void
 	if (isset($_POST['cf-submitted'])) {
         // Make new DB instance with second DB creds
         $cmDB = new WPDB(DB2_USER, DB2_PASSWORD, DB2_NAME, DB2_HOST);
+
+		if (sanitize_text_field($_POST['anti_bot']) != 6) {
+			echo 'Er ging iets mis! Bot vraag is verkeerd!';
+			return;
+		}
 
 		// Insert new request into Members table in the club manager DB
         $query = $cmDB->insert(
@@ -128,7 +133,7 @@ function handleNewFormSubmission(): void
 
 /**
  * Function to register the shortcode
- * 
+ *
  * @author AutiCodes
  * @return object ob_get_clean()
  */
